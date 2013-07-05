@@ -93,7 +93,7 @@ $X = 1;
     <?php
     If (!isset($Posts[$X])) { Echo "<i>There are no comments yet."; If ($user->data['is_registered']) { Echo "Be the first and comment using the form below."; } Echo "</i>"; }
     Else {
-        ?><div id="comment_section"><ol class="comments first_level">
+        ?><div id="comment_section" class="newsscrollbar"><ol class="comments first_level">
         <?php
         While (isset($Posts[$X])) { 
             $User = GetArray($db, "SELECT * FROM ".USERS_TABLE." WHERE user_id={$Posts[$X]['poster_id']}"); ?>
@@ -150,7 +150,7 @@ If ($Action == 'reel') {
     $Query = "SELECT * FROM ".TOPICS_TABLE." WHERE forum_id=".BLOG_FORUM_ID." ORDER BY topic_id DESC LIMIT 5";
     $BlogTopics = GetAll($db,$Query);
     $X = 0;
-    While (isset($NewsTopics[$X])) {
+    While (isset($BlogTopics[$X])) {
         $Query = "SELECT * FROM ".POSTS_TABLE." WHERE topic_id={$BlogTopics[$X]['topic_id']} ORDER BY post_id ASC";
         $Post = GetAll($db,$Query);
         $Result = Query($db, $Query);
@@ -175,7 +175,7 @@ echo substr(nl2br($post_text),0,750);
 If (strlen(nl2br($post_text)) > 750) { echo "..."; }
 ?></p>
 <div class="cleaner"></div>
-<a href="./forums/viewtopic.php?t=<?php Echo $BlogTopics[$X]['topic_id']; ?>" class="more float_r" target="_blank"> <?php Echo $TotalReplies;?> Comment(s). Read more.</a>
+<a href="./blog/view/<?php Echo $BlogTopics[$X]['topic_id']; ?>" class="more float_r"> <?php Echo $TotalReplies;?> Comment(s). Read more.</a>
 </div>
     </div><div class="cleaner"></div>
 </div>

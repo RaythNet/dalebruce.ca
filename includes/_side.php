@@ -1,5 +1,5 @@
 <?php
-$Query = "SELECT * FROM ".POSTS_TABLE." WHERE forum_id!=".PAGES_FORUM_ID." AND forum_id!=".LINKS_FORUM_ID." AND forum_id!=".NEWS_FORUM_ID." AND forum_id!=".BLOG_FORUM_ID." ORDER BY post_id DESC LIMIT 10";
+$Query = "SELECT * FROM ".POSTS_TABLE." WHERE forum_id!=".PAGES_FORUM_ID." AND forum_id!=".LINKS_FORUM_ID." AND forum_id!=".NEWS_FORUM_ID." AND forum_id!=".BLOG_FORUM_ID." AND post_subject LIKE 'Re:%' ORDER BY post_id DESC LIMIT 10";
 $Posts = GetAll($db,$Query);
 $X = 0;
 ?>
@@ -53,9 +53,33 @@ $X = 0;
 </div>
 
 <div class="sidebar_box">
-    <h4>Recent Forum Posts</h4>
+    <h4>Recent Forum Replies</h4>
     <div class="scrollbar">
 <?php
+  While (isset($Posts[$X])) {
+    $Query = "SELECT * FROM ".USERS_TABLE." WHERE user_id={$Posts[$X]['poster_id']}";
+    $User = GetArray($db,$Query);
+    ?>
+    <div class="recent_comment_box">
+    <a href="./forums/viewtopic.php?p=<?php Echo $Posts[$X]['post_id'];?>" target="_blank"><?php Echo $Posts[$X]['post_subject'];?></a> by <a href="./forums/memberlist.php?mode=viewprofile&u=<?php Echo $User['user_id'];?>" target="_blank"><b><font color="<?php Echo $User['user_colour']; ?>"><?php Echo $User['username']; ?></font></b></a>
+    <p><?php
+    $post_text = BBCode($Posts[$X]['post_text'],$Posts[$X]['bbcode_uid']);
+    Echo nl2br(substr($post_text,0,125));
+    if (strlen($post_text) > 125) { Echo "..."; }
+    ?></p></div>
+    <?php
+    $X++;
+  }
+?></div>
+</div>
+<div class="sidebar_box">
+    <h4>Recent Blog Comments</h4>
+    <div class="scrollbar">
+<?php
+$Query = "SELECT * FROM ".POSTS_TABLE." WHERE forum_id=".BLOG_FORUM_ID." AND post_subject LIKE 'Re:%' ORDER BY post_id DESC LIMIT 10";
+$Posts = GetAll($db,$Query);
+$X = 0;
+  If (!isset($Posts[$X])) { Echo "<i>No blog comments yet.</i>"; }
   While (isset($Posts[$X])) {
     $Query = "SELECT * FROM ".USERS_TABLE." WHERE user_id={$Posts[$X]['poster_id']}";
     $User = GetArray($db,$Query);

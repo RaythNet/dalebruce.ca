@@ -2,6 +2,7 @@
         <ul>
           <li><a href="./">Home</a></li>
           <li><a href="./forums/" target="_blank">Forums</a></li>
+          <li><a href="./blog/">Blog</a></li>
 <?php
 $Query = "SELECT * FROM ".TOPICS_TABLE." WHERE forum_id=".PAGES_FORUM_ID." AND topic_type=0 ORDER BY topic_id ASC";
 $Pages = GetAll($db, $Query);
