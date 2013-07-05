@@ -444,7 +444,7 @@ em { color: #4f7eff; }
 	color: #2b66ff;
 }
 .newsscrollbar {
-    max-height: 800px;
+    max-height: 1000px;
     overflow-y: auto;
 }   
 .newsscrollbar::-webkit-scrollbar { width:3px; }
