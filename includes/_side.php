@@ -31,12 +31,18 @@ $X = 0;
             </form></center>
         <?php } ?>
     </div>  
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZCV8M3JVT6V8A">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
 <div class="sidebar_box">
     <h4>Categories</h4>
     <ul class="tmo_list">
         <li><a href="http://www.youtube.com/SouthlakeFilms">South Lake Films</a></li>
         <li><a href="http://www.dalebruce.ca/forums/viewforum.php?f=30">Star Trek RP</a></li>
-        <li><a href="./">Stop</a></li>
+        <li><a href="www.thevenusproject.com">The Venus Project</a></li>
         <li><a href="./">Being</a></li>
         <li><a href="./">Latin</a></li>
         <li><a href="./">Sentences!!</a></li>
