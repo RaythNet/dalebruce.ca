@@ -32,13 +32,13 @@ $X = 0;
         <?php } ?>
     </div> 
     <div class="sidebar_box">
-        <h3>Support DaleBruce.Ca</h3>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <h4>Support DaleBruce.Ca</h4>
+<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="ZCV8M3JVT6V8A">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+</form></center>
     </div>
 <div class="sidebar_box">
     <h4>Categories</h4>
