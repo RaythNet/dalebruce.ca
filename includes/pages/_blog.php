@@ -1,4 +1,5 @@
 <?php
+//Showing howto commit
 If (isset($_GET['2'])) { $Action = $_GET['2']; } Else { $Action = 'reel'; }
 If ($Action == 'view') {
     If (isset($_GET['3'])) { $PostID = clean($_GET['3']); } else { $Action = 'reel'; }
