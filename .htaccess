@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC] 
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [L,R=301]
+RewriteRule ^(phpmyadmin|forums) - [L]
+RewriteRule    ^([A-Za-z0-9-]+)/?$    index.php?1=$1    [NC,L]
+RewriteRule    ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    index.php?1=$1&2=$2    [NC,L]
+RewriteRule    ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$  index.php?1=$1&2=$2&3=$3 [NC,L]
+RewriteRule    ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$  index.php?1=$1&2=$2&3=$3&4=$4 [NC,L]
