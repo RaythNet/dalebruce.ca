@@ -5,7 +5,7 @@ define('IN_PHPBB', true);
 $phpbb_root_path = './forums/';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx);
-include($phpbb_root_path . 'functions_content.' . $phpEx);
+include($phpbb_root_path . '/includes/functions_content.' . $phpEx);
 
 // Start session management
 $user->session_begin();
