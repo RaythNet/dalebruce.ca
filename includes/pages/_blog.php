@@ -76,7 +76,7 @@ If ($Action == 'view') {
 <h2><?php Echo $Posts[$X]['post_subject']; ?></h2>
 <div class="post_meta">
     <strong>Date: </strong><?php Echo date('D jS F Y',$Posts[$X]['post_time'])."@".date('G:i',$Posts[$X]['post_time']); ?> | 
-    <strong>Author: </strong><?php Echo "<a href=\"./forums/memberlist.php&mode=viewprofile&u={$User['user_id']}\" target=\"_blank\"><b><font color=\"#{$User['user_colour']}\">{$User['username']}</font></b></a>"; ?>
+    <strong>Author: </strong><?php Echo "<a href=\"./forums/memberlist.php?mode=viewprofile&u={$User['user_id']}\" target=\"_blank\"><b><font color=\"#{$User['user_colour']}\">{$User['username']}</font></b></a>"; ?>
 </div>
 <p><?php 
 $post_text = BBCode($Posts[$X]['post_text'],$Posts[$X]['bbcode_uid']);

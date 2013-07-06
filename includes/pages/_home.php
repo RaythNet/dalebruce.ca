@@ -26,7 +26,7 @@ While (isset($NewsTopics[$X])) {
 <h2><?php Echo $NewsTopics[$X]['topic_title']; ?></h2>
 <div class="post_meta">
     <strong>Date: </strong><?php Echo date('D jS F Y',$Post[0]['post_time']); ?> | 
-    <strong>Author: </strong><?php Echo "<a href=\"./forums/memberlist.php&mode=viewprofile&u={$User['user_id']}\" target=\"_blank\"><b><font color=\"#{$NewsTopics[$X]['topic_first_poster_colour']}\">{$NewsTopics[$X]['topic_first_poster_name']}</font></b></a>"; ?>
+    <strong>Author: </strong><?php Echo "<a href=\"./forums/memberlist.php?mode=viewprofile&u={$User['user_id']}\" target=\"_blank\"><b><font color=\"#{$NewsTopics[$X]['topic_first_poster_colour']}\">{$NewsTopics[$X]['topic_first_poster_name']}</font></b></a>"; ?>
 </div>
 <p><?php 
 $post_text = BBCode($Post[0]['post_text'],$Post[0]['bbcode_uid']);
