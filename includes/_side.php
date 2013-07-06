@@ -57,12 +57,14 @@ $X++;
 <div class="sidebar_box">
     <h4>Categories</h4>
     <ul class="tmo_list">
+        <?php If ($Page == 'blog') { ?>
+        <li><a href="./blog/">Latest Posts</a></li>
+        <li><a href="./blog/archive/">Blog Archive</a></li>
+        <?php } Else { ?>
         <li><a href="http://www.youtube.com/SouthlakeFilms">South Lake Films</a></li>
         <li><a href="http://www.dalebruce.ca/forums/viewforum.php?f=30">Star Trek RP</a></li>
         <li><a href="www.thevenusproject.com">The Venus Project</a></li>
-        <li><a href="./">Being</a></li>
-        <li><a href="./">Latin</a></li>
-        <li><a href="./">Sentences!!</a></li>
+        <?php } ?>
     </ul>
 </div>
 
