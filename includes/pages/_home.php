@@ -19,9 +19,9 @@ While (isset($NewsTopics[$X])) {
     <?php
     If (getAvatar($db, $NewsTopics[$X]['topic_first_poster_name']) != Null) {
         $User = GetArray($db, "SELECT * FROM ".USERS_TABLE." WHERE username='{$NewsTopics[$X]['topic_first_poster_name']}'");
-         ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="./forums/download/file.php?avatar=<?php Echo getAvatar($db, $NewsTopics[$X]['topic_first_poster_name']);?>" alt="Avatar"/></a><?php
-    }
-    ?>
+        If ($User['user_avatar_type'] == 1) { ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="./forums/download/file.php?avatar=<?php Echo getAvatar($db, $NewsTopics[$X]['topic_first_poster_name']);?>" alt="Avatar"/></a><?php }
+        If ($User['user_avatar_type'] == 2) { ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="<?php Echo getAvatar($db, $NewsTopics[$X]['topic_first_poster_name']);?>" alt="Avatar"/></a><?php }
+    } ?>
     <div class="post_box_right">
 <h2><?php Echo $NewsTopics[$X]['topic_title']; ?></h2>
 <div class="post_meta">
