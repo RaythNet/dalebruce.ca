@@ -15,7 +15,7 @@ While (isset($NewsTopics[$X])) {
     $Result = Query($db, $Query);
     $TotalReplies = mysqli_num_rows($Result)-1;
 ?>
-<div class="post_box<?php If ($X == 4) { Echo "_last"; } ?>">
+<div class="post_box">
     <?php
     If (getAvatar($db, $NewsTopics[$X]['topic_first_poster_name']) != Null) {
         $User = GetArray($db, "SELECT * FROM ".USERS_TABLE." WHERE username='{$NewsTopics[$X]['topic_first_poster_name']}'");

@@ -39,6 +39,20 @@ $X = 0;
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form></center>
+<br/><br/><h4>Affiliates</h4>
+<ul class="tmo_list">
+<?php
+$Query = "SELECT * FROM ".TOPICS_TABLE." WHERE forum_id=".LINKS_FORUM_ID." AND topic_type=0 ORDER BY topic_id ASC";
+$Links = GetAll($db, $Query);
+$X = 0;
+While (isset($Links[$X])) {
+   $Query = "SELECT * FROM ".POSTS_TABLE." WHERE post_id={$Links[$X]['topic_first_post_id']}";
+   $Array = GetArray($db,$Query);
+?><li><a href="<?php Echo html_entity_decode($Array['post_text']);?>/"><?php Echo html_entity_decode($Links[$X]['topic_title']); ?></a></li>
+<?php
+$X++;
+}
+?></ul>
     </div>
 <div class="sidebar_box">
     <h4>Categories</h4>
