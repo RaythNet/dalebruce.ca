@@ -8,7 +8,7 @@ $X = 0;
 	<?php
         if ($user->data['is_registered']) { ?>
         <center><b><font color="#<?php echo $user->data['user_colour'];?>"><?php echo $user->data['username'];?></font></b>
-        <br /><img src="./forums/download/file.php?avatar=<?php echo $user->data['user_avatar']; ?>" height="<?php echo $user->data['user_avatar_height']; ?>" width="<?php echo $user->data['user_avatar_width']; ?>" /><br/>
+        <br /><img src="<?php If ($user->data['user_avatar_type'] == 1) { ?>./forums/download/file.php?avatar=<?php } echo $user->data['user_avatar']; ?>" height="<?php echo $user->data['user_avatar_height']; ?>" width="<?php echo $user->data['user_avatar_width']; ?>" /><br/>
         <?php
         $Query = "SELECT * FROM ".RANKS_TABLE." WHERE rank_id={$user->data['user_rank']}";
         $Rank = GetArray($db, $Query);
