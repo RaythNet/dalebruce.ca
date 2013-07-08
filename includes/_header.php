@@ -6,8 +6,8 @@ Else { $Title = getTitle($db,$Page); }
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<base href="http://www.dalebruce.ca/"></base>
-<title>DaleBruce.ca :: <?php Echo $Title; ?></title>
+<base href="http://www.bruce-industries.com/"></base>
+<title>Bruce-Industries :: <?php Echo $Title; ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <style type="text/css" media="all">
 @import "./includes/style.css";
@@ -43,7 +43,7 @@ $(window).load(function() {
 	<div id="templatemo_header">
     
     	<div id="site_title">
-            <a href="http://dalebruce.ca"><span>Fiction is the Truth inside the Lie</span></a>
+            <a href="./"><span>Fiction is the Truth inside the Lie</span></a>
         </div> <!-- end of site_title -->
         
         

@@ -23,7 +23,7 @@ $X = 0;
             <br/>[<a href="./forums/faq.php">FAQ</a>] [<a href="./forums/memberlist.php">Members</a>] [<a href="./forums/search.php">Search</a>] [<a href="./forums/ucp.php?mode=register">Register</a>]
             <br/>
             <form action="./forums/ucp.php?mode=login" method="POST">
-                <input type="hidden" name="redirect" value="http://www.dalebruce.ca<?php echo $_SERVER['REQUEST_URI'];?>"/>
+                <input type="hidden" name="redirect" value="http://www.bruce-industries.com<?php echo $_SERVER['REQUEST_URI'];?>"/>
                 Username: <input type="text" name="username" style="border: 1px solid #102a61; background: #000; color: #ccc;"/><br />
                 Password: <input type="password" name="password" style="border: 1px solid #102a61; background: #000; color: #ccc;"/><br />
                 Remember Me?: <input type="checkbox" name="autologin" style="border: 1px solid #102a61; background: #000; color: #ccc;"/><br />
@@ -62,8 +62,8 @@ $X++;
         <li><a href="./blog/archive/">Blog Archive</a></li>
         <?php } Else { ?>
         <li><a href="http://www.youtube.com/SouthlakeFilms">South Lake Films</a></li>
-        <li><a href="http://www.dalebruce.ca/forums/viewforum.php?f=30">Star Trek RP</a></li>
-        <li><a href="www.thevenusproject.com">The Venus Project</a></li>
+        <li><a href="./forums/viewforum.php?f=30">Star Trek RP</a></li>
+        <li><a href="http://www.thevenusproject.com">The Venus Project</a></li>
         <?php } ?>
     </ul>
 </div>
