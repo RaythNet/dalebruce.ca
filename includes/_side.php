@@ -72,6 +72,7 @@ $X++;
     <h4>Recent Forum Replies</h4>
     <div class="scrollbar">
 <?php
+$X = 0;
   While (isset($Posts[$X])) {
     $Query = "SELECT * FROM ".USERS_TABLE." WHERE user_id={$Posts[$X]['poster_id']}";
     $User = GetArray($db,$Query);
