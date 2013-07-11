@@ -51,7 +51,7 @@ If ($Action == 'view') {
                 // 3.0.6
                 'force_approved_state'    => 1, // Allow the post to be submitted without going into unapproved queue
                 'post_time' => time(),
-                'poster_id' => $_SERVER['REMOTE_ADDRE']
+                'poster_id' => $_SERVER['REMOTE_ADDR']
              );
              $Query = "INSERT INTO ".POSTS_TABLE
                      ." (`topic_id`,`forum_id`,`poster_id`,`icon_id`,`poster_ip`,`post_time`,`post_approved`,`post_reported`,`enable_bbcode`,`enable_smilies`"
