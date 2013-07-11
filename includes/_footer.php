@@ -21,7 +21,7 @@ $PostCount = mysqli_num_rows(Query($db,$Query));
 <div class="footer_col_w300">
             <h4>Users Online</h4>
             <?php
-            $TimeSpan = time()-1320;
+            $TimeSpan = time()-900;
             $Query = "SELECT * FROM ".SESSIONS_TABLE." WHERE session_time>=$TimeSpan";
             $Active = mysqli_num_rows(Query($db,$Query));
             $Sessions = GetAll($db, $Query);
