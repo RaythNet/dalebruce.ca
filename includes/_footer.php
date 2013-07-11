@@ -72,7 +72,7 @@ $PostCount = mysqli_num_rows(Query($db,$Query));
         </div>
         <div class="footer_col_w300 last">
             <h4>About Us</h4>
-            <p>A Priemer Gaming Community!</p>
+            <p>A Premier Gaming Community!</p>
             <p>Copyright &copy; 2013 <a href="./">DaleBruce.Ca</a> <br /> Designed by <a href="http://www.templatemo.com" target="_blank">Free CSS Templates</a><br />Coding by <a href="http://www.raythnet.org/" target="_blank">Rayth</a></p>        
         </div>
             <div class="cleaner"></div>
