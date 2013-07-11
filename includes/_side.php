@@ -10,8 +10,13 @@ $X = 0;
         <center><b><font color="#<?php echo $user->data['user_colour'];?>"><?php echo $user->data['username'];?></font></b>
         <br /><img src="<?php If ($user->data['user_avatar_type'] == 1) { ?>./forums/download/file.php?avatar=<?php } echo $user->data['user_avatar']; ?>" height="<?php echo $user->data['user_avatar_height']; ?>" width="<?php echo $user->data['user_avatar_width']; ?>" /><br/>
         <?php
-        $Query = "SELECT * FROM ".RANKS_TABLE." WHERE rank_id={$user->data['user_rank']}";
-        $Rank = GetArray($db, $Query);
+                   If ($user->data['user_rank']) {
+                        $Query = "SELECT * FROM ".RANKS_TABLE." WHERE rank_id={$user->data['user_rank']}";
+                        $Rank = GetArray($db, $Query);
+                    } Else {
+                        $Query = "SELECT * FROM ".RANKS_TABLE." WHERE rank_min<={$user->data['user_posts']} AND rank_special=0 ORDER BY rank_min DESC LIMIT 1";
+                        $Rank = GetArray($db, $Query);
+                    }
         ?>
         <br /><?php Echo $Rank['rank_title']; ?><br/><img src="./forums/images/ranks/<?php echo $Rank['rank_image']; ?>"/><br/>
         <br />[<a href="<?php Echo append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=logout', true, $user->session_id);?>">Log out</a>] [<a href="./forums/faq.php">FAQ</a>] [<a href="./forums/memberlist.php">Members</a>] [<a href="./forums/search.php">Search</a>]
