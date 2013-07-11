@@ -32,7 +32,7 @@ $X = 0;
         <?php } ?>
     </div> 
     <div class="sidebar_box">
-        <h4>Support DaleBruce.Ca</h4>
+        <h4>Support Bruce-Industries!</h4>
 <center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="ZCV8M3JVT6V8A">
