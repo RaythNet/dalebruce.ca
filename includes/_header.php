@@ -43,7 +43,7 @@ $(window).load(function() {
 	<div id="templatemo_header">
     
     	<div id="site_title">
-            <a href="./"><span>Fiction is the Truth inside the Lie</span></a>
+            <a href="./"></a>
         </div> <!-- end of site_title -->
         
         

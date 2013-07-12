@@ -82,9 +82,9 @@ em { color: #4f7eff; }
 #site_title a {
 	float: left;
 	display: block;
-	width: 278px;
-	height: 80px;
-	margin: 20px 0 25px 100px;
+	width: 782px;
+	height: 125px;
+	margin: 10px 0 0px 100px;
 	font-size: 40px;
 	color: #fff;
 	font-weight: normal;
@@ -138,7 +138,7 @@ em { color: #4f7eff; }
 	display: block;
 	width: 120px;
 	height: 23px;
-	padding-top: 50px;
+	padding-top: 40px;
 	font-size: 18px;
 	color: #91a1c7;	
 	text-align: center;
