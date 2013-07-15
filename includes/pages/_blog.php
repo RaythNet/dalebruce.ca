@@ -69,8 +69,8 @@ If ($Action == 'view') {
     <?php
     $User = GetArray($db, "SELECT * FROM ".USERS_TABLE." WHERE user_id={$Posts[$X]['poster_id']}");
     If (getAvatar($db, $User['username']) != Null) {
-        If ($User['user_avatar_type'] == 1) { ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="./forums/download/file.php?avatar=<?php Echo getAvatar($db, $NewsTopics[$X]['topic_first_poster_name']);?>" alt="Avatar"/></a><?php }
-        If ($User['user_avatar_type'] == 2) { ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="<?php Echo getAvatar($db, $NewsTopics[$X]['topic_first_poster_name']);?>" alt="Avatar"/></a><?php }
+        If ($User['user_avatar_type'] == 1) { ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="./forums/download/file.php?avatar=<?php Echo getAvatar($db, $User['username']);?>" alt="Avatar"/></a><?php }
+        If ($User['user_avatar_type'] == 2) { ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="<?php Echo getAvatar($db, $User['username']);?>" alt="Avatar"/></a><?php }
     }
     ?>
 <div class="post_box_right">
@@ -159,9 +159,9 @@ If ($Action == 'reel') {
         ?>
 <div class="post_box">
     <?php
-    If (getAvatar($db, $BlogTopics[$X]['topic_first_poster_name']) != Null) {
-        $User = GetArray($db, "SELECT * FROM ".USERS_TABLE." WHERE username='{$BlogTopics[$X]['topic_first_poster_name']}'");
-         ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="./forums/download/file.php?avatar=<?php Echo getAvatar($db, $BlogTopics[$X]['topic_first_poster_name']);?>" alt="Avatar"/></a><?php
+    $User = GetArray($db, "SELECT * FROM ".USERS_TABLE." WHERE username='{$BlogTopics[$X]['topic_first_poster_name']}'");
+    If (getAvatar($db, $User['username']) != Null) {
+         ?><a href="./forums/memberlist.php?mode=viewprofile&u=<?php echo $User['user_id'];?>" target="_blank"><img src="<?php If ($User['user_avatar_type'] == 1) {?>./forums/download/file.php?avatar=<?php } Echo getAvatar($db, $User['username']);?>" alt="Avatar"/></a><?php
     }
     ?>
 <div class="post_box_right">
