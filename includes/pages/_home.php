@@ -1,9 +1,3 @@
-<div id="homepage_slider">
-     <div id="slider">
-                    <a href="#"><img src="./includes/images/slideshow/08.jpg" width="580" height="300" alt="Image 7" title="Gliese667C" /></a>
-                    <a href="#"><img src="./includes/images/slideshow/01.jpg" width="580" height="300" alt="Image 1" title="Windmills - East Point" /></a>
-      </div>
-</div>
 <?php
 $Query = "SELECT * FROM ".TOPICS_TABLE." WHERE forum_id=".NEWS_FORUM_ID." ORDER BY topic_id DESC LIMIT 5";
 $NewsTopics = GetAll($db,$Query);
