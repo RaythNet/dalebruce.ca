@@ -67,8 +67,8 @@ $X++;
         <li><a href="./blog/archive/">Blog Archive</a></li>
         <?php } Else { ?>
         <li><a href="http://www.youtube.com/SouthlakeFilms">South Lake Films</a></li>
-        <li><a href="./forums/viewforum.php?f=30">Star Trek RP</a></li>
-        <li><a href="http://www.thevenusproject.com">The Venus Project</a></li>
+        <li><a href="http://www.youtube.com/Katers17">Katers17</a></li>
+        <li><a href="http://www.youtube.com/SMPFilms">Cory! AKA Mr.Safety</a></li>
         <?php } ?>
     </ul>
 </div>
