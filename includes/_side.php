@@ -60,7 +60,7 @@ $X++;
 ?></ul>
     </div>
 <div class="sidebar_box">
-    <h4>Categories</h4>
+    <h4>Youtubers!</h4>
     <ul class="tmo_list">
         <?php If ($Page == 'blog') { ?>
         <li><a href="./blog/">Latest Posts</a></li>
